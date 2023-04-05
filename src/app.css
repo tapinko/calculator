@@ -1,0 +1,154 @@
+:root {
+    --bg: #D5B4B4;
+    --main: #867070;
+    --sec: #E4D0D0;
+    --neut: #F5EBEB;
+    --border-width: 2px;
+    --anim-duration: 0.5s;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: var(--bg);
+    color: var(--main);
+    font-size: 90%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+h1 {
+    color: var(--main);
+    font-size: 10vh;
+}
+
+h2 {
+    color: var(--sec);
+    font-size: 5vh;
+}
+
+form {
+    margin-right: 0.1em; 
+}
+
+input {
+    border: 2px solid var(--sec);
+    border-radius: 4px;
+    background-color: var(--sec);
+    width: 5em;
+    font-size: 3em;
+    color: var(--main);
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8em;
+}
+
+#numpad_box {
+    display: flex;
+}
+
+#num_box {
+    border-right: 2px solid var(--main);
+    border-left: 2px solid var(--main);
+    padding: 0 0.7em 0 0.7em;
+    margin: 0 0.7em 0 0.7em;
+}
+
+#n0 {
+    width: 4.9em;
+}
+
+#operation_box {
+    display: flex;
+    align-items: center;
+}
+
+button {
+    font-size: 1rem;
+    border: 2px solid var(--sec);
+    border-radius: 4px;
+    background-color: transparent;
+    width: 1.5em;
+    height: 1.5em;
+    margin: 0.1em;
+    font-size: 3em;
+    color: var(--main);
+    text-align: center;
+}
+
+button:hover {
+    background-color: var(--neut);
+}
+
+button:active {
+    background-color: var(--neut);
+}
+
+#equals_btn {
+    width: 3.2em;
+    background-color: #beffc7;
+}
+
+#equals_btn:hover {
+    background-color: #86ff96;
+}
+
+#equals_btn:active {
+    background-color: #86ff96;
+}
+
+#backspace_btn {
+    background-color: #ffb3b3;
+}
+
+#backspace_btn:hover {
+    background-color: #ff6969;
+}
+
+#backspace_btn:active {
+    background-color: #ff6969;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+}
+
+@media (max-width: 600px) {
+    main {
+        display: block;
+    }
+    
+    form {
+        margin: 1em;
+        display: flex;
+        justify-content: center;
+    }
+
+    #numpad_box {
+        border-top: 2px solid var(--main);
+        padding-top: 0.7em;
+    }
+
+    #num_box {
+        border-left: 0;
+    }
+
+    #operation_box {
+        display: block;
+    }
+}
